@@ -1,0 +1,122 @@
+:root {
+  color-scheme: light;
+  --paper: #f7f7ef;
+  --ink: #193f43;
+  --muted: #526969;
+  --line: #d2ddd4;
+  --mint: #deefe4;
+  --deep: #184e52;
+  --orange: #db7c51;
+}
+
+* { box-sizing: border-box; }
+html { scroll-padding-top: 1.5rem; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; text-underline-offset: .2em; }
+a:hover { color: #176c64; }
+a:focus-visible { outline: 3px solid #166d66; outline-offset: 6px; border-radius: 2px; }
+img { display: block; max-width: 100%; height: auto; }
+h1, h2, h3, p { margin: 0; }
+.site-shell { max-width: 1184px; padding: 0 48px; margin: 0 auto; }
+.site-header { display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 112px; border-bottom: 1px solid var(--line); }
+.wordmark { display: flex; align-items: center; gap: 10px; font-size: 1rem; line-height: 1.05; letter-spacing: -.02em; font-weight: 760; text-decoration: none; }
+.wordmark img { width: 48px; height: 48px; }
+.wordmark-studio { font-size: .78em; letter-spacing: .17em; text-transform: uppercase; font-weight: 550; }
+nav { display: flex; align-items: center; gap: 30px; font-size: .9rem; font-weight: 550; }
+nav a { text-decoration: none; }
+nav a:hover { text-decoration: underline; }
+.intro { display: grid; grid-template-columns: 1.2fr 1fr; gap: 56px; align-items: center; padding: 80px 0 88px; }
+.eyebrow { font-size: .76rem; font-weight: 650; letter-spacing: .1em; text-transform: uppercase; }
+.intro .eyebrow { display: flex; align-items: center; gap: 12px; margin-bottom: 24px; }
+.small-rule { width: 24px; height: 2px; background: var(--orange); }
+h1 { font-size: clamp(3.7rem, 6.5vw, 5.75rem); font-weight: 700; letter-spacing: -.065em; line-height: .98; }
+.title-dot { color: var(--orange); }
+.korean-name { margin-top: 22px; font-weight: 550; font-size: 1.02rem; letter-spacing: .03em; }
+.intro-description { max-width: 390px; margin-top: 20px; color: var(--muted); font-size: 1.02rem; line-height: 1.8; }
+.intro-description a { font-weight: 650; }
+.studio-mark { position: relative; display: flex; justify-content: center; align-items: center; aspect-ratio: 1; min-width: 0; background: var(--mint); border-radius: 4px 80px 4px 4px; overflow: hidden; }
+.studio-mark::before { position: absolute; content: ""; width: 80%; height: 80%; border: 1px solid #b8d3c4; border-radius: 50%; }
+.studio-mark img { z-index: 1; width: 82%; }
+.mark-coordinate { position: absolute; z-index: 2; font-size: .56rem; font-weight: 600; letter-spacing: .16em; color: #42685e; }
+.coordinate-top { left: 22px; top: 20px; }
+.coordinate-bottom { left: 22px; bottom: 20px; }
+.game-section, .support-section, .privacy-section { display: grid; grid-template-columns: 180px minmax(0, 1fr); gap: 44px; padding: 48px 0; border-top: 1px solid var(--line); }
+.section-label { display: flex; align-items: baseline; gap: 18px; padding-top: 5px; font-size: .78rem; font-weight: 600; }
+.section-label > span { color: #647971; font-size: .68rem; font-variant-numeric: tabular-nums; }
+.game-heading { display: flex; justify-content: space-between; align-items: start; flex-wrap: wrap; gap: 24px; }
+.game-heading .eyebrow { margin-bottom: 10px; font-size: .65rem; color: var(--muted); }
+h2 { font-size: clamp(1.7rem, 3.2vw, 2.5rem); line-height: 1.2; font-weight: 650; letter-spacing: -.04em; }
+.game-korean { margin-top: 6px; color: var(--muted); font-size: .95rem; }
+.release-status { display: inline-flex; align-items: center; gap: 8px; padding: 7px 11px; margin-top: 1px; background: #ecebda; border: 1px solid #dddcc6; border-radius: 3px; color: #5c5e36; font-size: .68rem; font-weight: 600; white-space: nowrap; }
+.release-status > span { width: 5px; height: 5px; border-radius: 50%; background: #777b46; }
+.game-description { max-width: 560px; margin-top: 24px; color: var(--muted); }
+.language-block { margin-top: 34px; }
+h3 { font-size: .84rem; font-weight: 600; }
+.languages { list-style: none; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; padding: 0; margin: 16px 0 0; }
+.languages li { border-top: 1px solid var(--line); padding-top: 14px; }
+.languages li > span { display: block; font-weight: 600; font-size: 1rem; }
+.languages li > span + span { margin-top: 4px; font-size: .67rem; color: var(--muted); font-weight: 400; }
+.support-content h2, .privacy-content h2 { font-size: clamp(1.4rem, 2.7vw, 1.9rem); }
+.support-content > p, .privacy-content p { margin-top: 12px; color: var(--muted); font-size: .94rem; }
+.contact-link { display: inline-block; max-width: 100%; margin-top: 24px; font-size: clamp(1rem, 2.5vw, 1.4rem); font-weight: 550; overflow-wrap: anywhere; }
+.contact-link > span { display: inline-block; margin-left: 8px; color: #537c70; }
+.support-content > .support-korean { margin-top: 18px; font-size: .78rem; }
+.privacy-content { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 24px; }
+.policy-link { display: inline-flex; gap: 20px; padding: 11px 17px; border: 1px solid #92afa2; border-radius: 3px; text-decoration: none; font-size: .83rem; font-weight: 600; }
+.policy-link:hover { background: var(--mint); }
+.site-footer { display: flex; justify-content: space-between; gap: 16px; padding: 26px 0 30px; border-top: 1px solid var(--line); color: var(--muted); font-size: .7rem; }
+.skip-link { position: absolute; left: 16px; top: -80px; z-index: 10; padding: 12px 18px; color: white; background: var(--deep); }
+.skip-link:focus { top: 12px; color: white; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+
+@media (max-width: 900px) {
+  .site-shell { padding: 0 32px; }
+  .intro { gap: 32px; padding: 64px 0; }
+  h1 { font-size: clamp(3.1rem, 7.4vw, 4.8rem); }
+  .game-section, .support-section, .privacy-section { grid-template-columns: 140px minmax(0, 1fr); gap: 28px; }
+  .mark-coordinate { font-size: .46rem; letter-spacing: .09em; }
+  .coordinate-top { left: 16px; top: 16px; }
+  .coordinate-bottom { left: 16px; bottom: 16px; }
+}
+
+@media (max-width: 640px) {
+  .site-shell { padding: 0 24px; }
+  .site-header { min-height: 96px; gap: 16px; }
+  .wordmark { font-size: .88rem; gap: 5px; }
+  .wordmark img { width: 40px; height: 40px; }
+  nav { gap: 16px; font-size: .74rem; }
+  .intro { grid-template-columns: 1fr; gap: 36px; padding: 44px 0; }
+  h1 { font-size: clamp(3.1rem, 13vw, 5rem); }
+  .intro .eyebrow { font-size: .66rem; margin-bottom: 22px; }
+  .korean-name { margin-top: 20px; font-size: .94rem; }
+  .intro-description { font-size: .96rem; max-width: 420px; }
+  .studio-mark { width: 100%; max-width: 390px; aspect-ratio: 1.2; justify-self: center; border-radius: 4px 56px 4px 4px; }
+  .studio-mark img { width: 68%; }
+  .studio-mark::before { width: 70%; height: 84%; }
+  .mark-coordinate { font-size: .52rem; }
+  .game-section, .support-section, .privacy-section { grid-template-columns: 1fr; gap: 25px; padding: 32px 0; }
+  .section-label { padding-top: 0; }
+  .game-heading { gap: 18px; }
+  .game-heading .eyebrow { letter-spacing: .07em; font-size: .6rem; }
+  .release-status { margin-top: 0; }
+  .game-description { margin-top: 20px; font-size: .94rem; }
+  .language-block { margin-top: 28px; }
+  .languages { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 28px; row-gap: 18px; }
+  .privacy-content { gap: 22px; }
+  .site-footer { font-size: .62rem; padding: 22px 0; }
+}
+
+@media (max-width: 370px) {
+  .site-header { align-items: flex-start; flex-direction: column; justify-content: center; gap: 15px; padding: 18px 0; }
+  nav { width: 100%; justify-content: space-between; }
+  .site-shell { padding: 0 20px; }
+  .mark-coordinate { font-size: .43rem; }
+}
